@@ -14,8 +14,11 @@ const cld = (id, w = 'auto', q = 'auto') =>
     const pct = document.getElementById('loaderPct');
     if (!overlay) return;
 
+    const MIN_DURATION = 4500;   // minimal 4.5 detik biar logo + animasi keliatan semua
+    const startTime = Date.now();
+
     let progress = 0;
-    const duration = 2800;
+    const duration = 4200;
     const interval = 30;
     const step = (interval / duration) * 100;
 
@@ -27,17 +30,21 @@ const cld = (id, w = 'auto', q = 'auto') =>
     }, interval);
 
     function finish() {
+        const elapsed = Date.now() - startTime;
+        const remaining = Math.max(0, MIN_DURATION - elapsed);
         clearInterval(timer);
-        bar.style.width = '100%';
-        pct.textContent = '100%';
         setTimeout(() => {
-            overlay.classList.add('done');
-            document.body.classList.add('page-ready');
-        }, 700);
+            bar.style.width = '100%';
+            pct.textContent = '100%';
+            setTimeout(() => {
+                overlay.classList.add('done');
+                document.body.classList.add('page-ready');
+            }, 700);
+        }, remaining);
     }
 
     window.addEventListener('load', finish);
-    setTimeout(finish, duration + 500);
+    setTimeout(finish, MIN_DURATION + 800);
 })();
 
 // ==========================================
@@ -55,24 +62,23 @@ const muridData = [
     { id: 9, nama: "Muh. Bilal Al Banjary", nickname: "@Bilal", foto: cld("BILAL00_jkcjqj", 400), asal: "Tanah Bumbu", keahlian: "Main Basket", cita: "Bos Tahu Tempe", quote: "Jalan Boleh Masing-Masing Tapi Jangan Sampai Asing", aib: "Pemain Basket", sosmed: { ig: "@bilal_2ll", tiktok: "@bilal_2ll" } },
     { id: 10, nama: "Budi Darmawan", nickname: "@Budi", foto: cld("BUDI00_brmzez", 400), asal: "Tebing Tinggi", keahlian: "Suka mencari hal yg baru", cita: "Sukses di masa muda", quote: "Sudah pasti pecah boy aii", aib: "Ada 2 orang", sosmed: { ig: "@bud.ajaa", tiktok: "@di_dermw" } },
     { id: 11, nama: "Apriano Carles Lau", nickname: "@Carles", foto: cld("CHARLES00_eo7j8z", 400), asal: "Kotabaru - Sengayam", keahlian: "Supir dan Mekanik Pertanian", cita: "Pengusaha Bengkel Otomotif", quote: "Berani bermimpi, dan terus melangkah meski menghadapi rintangan. Tuhan Yesus memberkati.", aib: "Ngelawak sama guru mulu", sosmed: { ig: "@apr.carless__", tiktok: "@carles_rakat024" } },
-    { id: 12, nama: "DIANSYAH", nickname: "@Dian", foto: cld("DIANSYAH00_gpsnmz", 400), asal: "Tanah Bumbu - Simpang Empat", keahlian: "Gesit, Idealis", cita: "Sukses", quote: "Pohon mana yang bisa di panjat, itulah buah yang ku petik.", aib: "Tidur saat latihan UKK, hasil UKK ga Remedial", sosmed: { ig: "-", tiktok: "-" } },
+    { id: 12, nama: "Diansyah", nickname: "@Dian", foto: cld("DIANSYAH00_gpsnmz", 400), asal: "Tanah Bumbu - Simpang Empat", keahlian: "Gesit, Idealis", cita: "Sukses", quote: "Pohon mana yang bisa di panjat, itulah buah yang ku petik.", aib: "Tidur saat latihan UKK, hasil UKK ga Remedial", sosmed: { ig: "-", tiktok: "-" } },
     { id: 13, nama: "Dika Yugi Pratama", nickname: "@Dika", foto: cld("DIKA00_ejlcml", 400), asal: "Nganjuk, Jawa Timur", keahlian: "Ngoding full stack adaptasi tingkat kesusahan", cita: "Senior full stack developer", quote: "Kesehatan itu bukan suplemen, tapi pola hidup. Rutin, konsisten, dan disiplin.", aib: "apaajala", sosmed: { ig: "@devxpxnyctrl_", tiktok: "@takashiiorienzx" } },
     { id: 14, nama: "Egidius Berek", nickname: "@Peni", foto: cld("EGIDIUS00_odoylq", 400), asal: "Kotabaru - Sengayam", keahlian: "Main Epep", cita: "Sukses dibidang apapun itu Aminn.", quote: "Apa pun ujung nya senang bisa kenal dengan kalian semua, Semoga sukses semua Kalian", aib: "Ga suka buat marah Bu vina, lambat kerjain tugas", sosmed: { ig: "@pennnn_80", tiktok: "JAGOAN>>MAMA" } },
     { id: 15, nama: "Ervan Effendi", nickname: "@ervan", foto: cld("ERVAN00_wcbjcb", 400), asal: "Kotabaru - Langadai", keahlian: "Bulu Tangkis", cita: "Sukses Dibidang Pertanian", quote: "Susah senang selalu bersama", aib: "Di panggil Ketua", sosmed: { ig: "@ervan__44", tiktok: "@ervan_2304" } },
-    { id: 16, nama: "HENGKY", nickname: "@hengky_mp", foto: cld("HENGKY00_g5mhuy", 400), asal: "Tidak tau", keahlian: "Tidak tau", cita: "Tidak tau", quote: "Pertanian harus dibicarakan dengan bangga.", aib: "Tidak tau", sosmed: { ig: "-", tiktok: "-" } },
-    { id: 17, nama: "HERMAWAN", nickname: "@Mawan", foto: cld("HERMAWAN00_fyp82i", 400), asal: "Tanah Bumbu", keahlian: "Mekanisasi Pertanian", cita: "Billionaire", quote: "Skill membuatmu diterima, adab membuatmu bertahan.", aib: "NPC", sosmed: { ig: "@mwannn_", tiktok: "-" } },
-    { id: 18, nama: "MASJIDI", nickname: "@masjidi_mp", foto: cld("MASJIDI00_nycezj", 400), asal: "Jakarta", keahlian: "Koordinir kegiatan kelas", cita: "Entrepreneur agro-industri", quote: "Pemimpin sejati turun ke sawah, bukan cuma perintah.", aib: "Ketua kelas yang sering lupa rapat sendiri", sosmed: { ig: "-", tiktok: "-" } },
+    { id: 16, nama: "Hengky Saputra", nickname: "@hengky_mp", foto: cld("HENGKY00_g5mhuy", 400), asal: "Tidak tau", keahlian: "Tidak tau", cita: "Tidak tau", quote: "Pertanian harus dibicarakan dengan bangga.", aib: "Tidak tau", sosmed: { ig: "-", tiktok: "-" } },
+    { id: 17, nama: "Hermawan", nickname: "@Mawan", foto: cld("HERMAWAN00_fyp82i", 400), asal: "Tanah Bumbu", keahlian: "Mekanisasi Pertanian", cita: "Billionaire", quote: "Skill membuatmu diterima, adab membuatmu bertahan.", aib: "NPC", sosmed: { ig: "@mwannn_", tiktok: "-" } },
+    { id: 18, nama: "Masjidi", nickname: "@masjidi_mp", foto: cld("MASJIDI00_nycezj", 400), asal: "Jakarta", keahlian: "Koordinir kegiatan kelas", cita: "Entrepreneur agro-industri", quote: "Pemimpin sejati turun ke sawah, bukan cuma perintah.", aib: "Ketua kelas yang sering lupa rapat sendiri", sosmed: { ig: "-", tiktok: "-" } },
     { id: 19, nama: "Ragil Hafiz Imtiyaz", nickname: "@Ragil", foto: cld("RAGIL00_f6f8kc", 400), asal: "Ngawi - Pasar Sabtu", keahlian: "Berenang", cita: "Mekanik Muda", quote: "Keberhasilan bukanlah milik orang pintar, keberhasilan adalah milik mereka yang senantiasa berusaha.", aib: "Anak Rajin", sosmed: { ig: "@rragilhafiz._", tiktok: "@rragilhafiz" } },
-    { id: 20, nama: "RAMADAN", nickname: "@Rama", foto: cld("RAMADAN00_gptacb", 400), asal: "Tanah Bumbu", keahlian: "Casting ikan Gabus", cita: "Jadi orang sukses versi diri sendiri", quote: "Setiap baut yang dikencangkan adalah doa.", aib: "Master MTK", sosmed: { ig: "@rama____39", tiktok: "@rama____39" } },
+    { id: 20, nama: "Ramadan", nickname: "@Rama", foto: cld("RAMADAN00_gptacb", 400), asal: "Tanah Bumbu", keahlian: "Casting ikan Gabus", cita: "Jadi orang sukses versi diri sendiri", quote: "Setiap baut yang dikencangkan adalah doa.", aib: "Master MTK", sosmed: { ig: "@rama____39", tiktok: "@rama____39" } },
     { id: 21, nama: "Rayhan Said Kelana", nickname: "@Rehan", foto: cld("REHAN00_m4bks1", 400), asal: "Tanah Bumbu - Karang Bintang", keahlian: "Main Volleyball", cita: "Pengusaha Sukses", quote: "Tanah yang dijaga adalah warisan untuk anak cucu.", aib: "Anak Rajin", sosmed: { ig: "@rehannsaiddd_", tiktok: "@Hanzz" } },
     { id: 22, nama: "Revando Rumondor", nickname: "@Revan", foto: cld("REVANDO00_gyyyv7", 400), asal: "Manado", keahlian: "Main Domino", cita: "Tentara", quote: "Jika tidak ada bahu untuk bersandar maka masih ada nasi untuk di dahar, kita butuh asupan bukan harapan", aib: "Anak yg teladan, telat datang pulang duluan", sosmed: { ig: "@Revan.__15", tiktok: "@revvv16_" } },
     { id: 23, nama: "Richo Cahyadi", nickname: "@Riko", foto: cld("RICO00_fupuky", 400), asal: "Kotabaru - Desa sungai Kupang jaya", keahlian: "Nyoper sezzz", cita: "Sukses dibidang usaha", quote: "Takut akan kegagalan seharusnya tidak menjadi alasan untuk tidak mencoba sesuatu.", aib: "Anak Rajin", sosmed: { ig: "@rikonamanya_", tiktok: "@ulunkdpapa" } },
     { id: 24, nama: "Aditya Rio Oktavian", nickname: "@Rio", foto: cld("RIO00_sucq66", 400), asal: "Kotabaru - Serongga", keahlian: "Mekanik Alat Berat", cita: "Sukses Dibidang Pertanian", quote: "Apa pun ujung nya senang bisa kenal dengan kalian", aib: "Master Catur", sosmed: { ig: "@aadityaario", tiktok: "@aadityaario" } },
-    { id: 25, nama: "SAFRI", nickname: "@Safri", foto: cld("SAFRI00_qwuixd", 400), asal: "Simpang Empat - Tanah Bumbu", keahlian: "Atlet Boxing", cita: "Sukses bidang Tambang Emas", quote: "Anak baik dan sopan kepada guru.", aib: "Si Paling Atlit Boxing", sosmed: { ig: "@mhmmdsafriyy", tiktok: "@mhmmdsafriyy" } },
+    { id: 25, nama: "Safri", nickname: "@Safri", foto: cld("SAFRI00_qwuixd", 400), asal: "Simpang Empat - Tanah Bumbu", keahlian: "Atlet Boxing", cita: "Sukses bidang Tambang Emas", quote: "Anak baik dan sopan kepada guru.", aib: "Si Paling Atlit Boxing", sosmed: { ig: "@mhmmdsafriyy", tiktok: "@mhmmdsafriyy" } },
     { id: 26, nama: "M. Saupy Aldy Akbar", nickname: "@Saupy", foto: cld("SAUFI00_eepl1v", 400), asal: "Tanah Bumbu - Sungai Kecil", keahlian: "Bahasa inggris", cita: "Menjadi Mekanik Pertanian", quote: "Dunia memang sulit tapi disitulah Seru nya.", aib: "Anak Rajin dan Sopan", sosmed: { ig: "@saupy_kren", tiktok: "-" } },
     { id: 27, nama: "M. Noor Suhan", nickname: "@Subhan", foto: cld("SUBHAN00_ze16jc", 400), asal: "Tanah Bumbu - Desa Selaselilau", keahlian: "Apa aja bisa sampai batas kemampuan", cita: "Sukses", quote: "Hidup akan sangat indah jika kamu tahu manakah jalan yang benar.", aib: "Anak Rajin dan baik hati", sosmed: { ig: "@m.usop_", tiktok: "@usop" } }
 ];
-
 // ==========================================
 // SOSMED CONFIG
 // ==========================================
@@ -103,11 +109,13 @@ function initCursor() {
     document.body.appendChild(ring);
 
     let mx = 0, my = 0, rx = 0, ry = 0;
+    let rafId = null;
 
     document.addEventListener('mousemove', e => {
         mx = e.clientX; my = e.clientY;
         cursor.style.left = mx + 'px';
         cursor.style.top = my + 'px';
+        if (!rafId) rafId = requestAnimationFrame(animateRing);
     });
 
     function animateRing() {
@@ -115,9 +123,13 @@ function initCursor() {
         ry += (my - ry) * 0.12;
         ring.style.left = rx + 'px';
         ring.style.top = ry + 'px';
-        requestAnimationFrame(animateRing);
+        // stop RAF kalau ring sudah sangat dekat ke cursor (idle)
+        if (Math.abs(mx - rx) < 0.5 && Math.abs(my - ry) < 0.5) {
+            rafId = null;
+        } else {
+            rafId = requestAnimationFrame(animateRing);
+        }
     }
-    animateRing();
 
     const hoverTargets = 'a, button, .carousel-item, .fst-card, .folder-tab';
     document.querySelectorAll(hoverTargets).forEach(el => {

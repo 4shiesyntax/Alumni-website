@@ -76,7 +76,7 @@ const muridData = [
     { id: 24, nama: "Aditya Rio Oktavian", nickname: "@Rio", foto: cld("RIO00_sucq66", 400), asal: "Kotabaru - Serongga", keahlian: "Mekanik Alat Berat", cita: "Sukses Dibidang Pertanian", quote: "Apa pun ujung nya senang bisa kenal dengan kalian", aib: "Master Catur", sosmed: { ig: "@aadityaario", tiktok: "@aadityaario" } },
     { id: 25, nama: "Safri", nickname: "@Safri", foto: cld("SAFRI00_qwuixd", 400), asal: "Simpang Empat - Tanah Bumbu", keahlian: "Atlet Boxing", cita: "Sukses bidang Tambang Emas", quote: "Anak baik dan sopan kepada guru.", aib: "Si Paling Atlit Boxing", sosmed: { ig: "@mhmmdsafriyy", tiktok: "@mhmmdsafriyy" } },
     { id: 26, nama: "M. Saupy Aldy Akbar", nickname: "@Saupy", foto: cld("SAUFI00_eepl1v", 400), asal: "Tanah Bumbu - Sungai Kecil", keahlian: "Bahasa inggris", cita: "Menjadi Mekanik Pertanian", quote: "Dunia memang sulit tapi disitulah Seru nya.", aib: "Anak Rajin dan Sopan", sosmed: { ig: "@saupy_kren", tiktok: "-" } },
-    { id: 27, nama: "M. Noor Suhan", nickname: "@Subhan", foto: cld("SUBHAN00_ze16jc", 400), asal: "Tanah Bumbu - Desa Selaselilau", keahlian: "Apa aja bisa sampai batas kemampuan", cita: "Sukses", quote: "Hidup akan sangat indah jika kamu tahu manakah jalan yang benar.", aib: "Anak Rajin dan baik hati", sosmed: { ig: "@m.usop_", tiktok: "@usop" } }
+    { id: 27, nama: "M. Noor Subhan", nickname: "@Subhan", foto: cld("SUBHAN00_ze16jc", 400), asal: "Tanah Bumbu - Desa Selaselilau", keahlian: "Apa aja bisa sampai batas kemampuan", cita: "Sukses", quote: "Hidup akan sangat indah jika kamu tahu manakah jalan yang benar.", aib: "Anak Rajin dan baik hati", sosmed: { ig: "@m_usop_", tiktok: "@usop" } }
 ];
 // ==========================================
 // SOSMED CONFIG

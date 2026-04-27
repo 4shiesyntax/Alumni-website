@@ -4,35 +4,34 @@
 const CLOUD = 'dk38zn7up';
 const cld = (id, w = 'auto', q = 'auto') =>
     `https://res.cloudinary.com/${CLOUD}/image/upload/w_${w},q_${q},f_auto/${id}`;
-
 // ==========================================
 // LOADING SCREEN
 // ==========================================
 (function () {
     const overlay = document.getElementById('loaderOverlay');
-    const bar = document.getElementById('loaderBar');
-    const pct = document.getElementById('loaderPct');
+    const bar     = document.getElementById('loaderBar');
+    const pct     = document.getElementById('loaderPct');
     if (!overlay) return;
-
-    const MIN_DURATION = 4500;   // minimal 4.5 detik biar logo + animasi keliatan semua
-    const startTime = Date.now();
-
-    let progress = 0;
-    const duration = 4200;
-    const interval = 30;
-    const step = (interval / duration) * 100;
-
+ 
+    const TOTAL    = 100;
+    const DURATION = 4000; // 4 detik
+    const STEP_MS  = DURATION / TOTAL; // 40ms per angka
+    let current    = 0;
+    let finished   = false;
+ 
     const timer = setInterval(() => {
-        const ease = progress < 70 ? step * 1.4 : step * 0.55;
-        progress = Math.min(progress + ease, 99);
-        bar.style.width = progress + '%';
-        pct.textContent = Math.floor(progress) + '%';
-    }, interval);
-
+        if (finished) return;
+        current++;
+        bar.style.width = current + '%';
+        pct.textContent = current + '%';
+        if (current >= TOTAL) clearInterval(timer);
+    }, STEP_MS);
+ 
     function finish() {
-        const elapsed = Date.now() - startTime;
-        const remaining = Math.max(0, MIN_DURATION - elapsed);
+        if (finished) return;
+        finished = true;
         clearInterval(timer);
+        const remaining = (TOTAL - current) * STEP_MS;
         setTimeout(() => {
             bar.style.width = '100%';
             pct.textContent = '100%';
@@ -42,9 +41,9 @@ const cld = (id, w = 'auto', q = 'auto') =>
             }, 700);
         }, remaining);
     }
-
+ 
     window.addEventListener('load', finish);
-    setTimeout(finish, MIN_DURATION + 800);
+    setTimeout(finish, DURATION + 800);
 })();
 
 // ==========================================

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kenangan Kebersamaan Mekanisasi Pertanian — 27 Siswa, Satu Cerita, Sejuta Kenangan. SMKS Kodeco Angkatan 2023.">
+    <meta name="theme-color" content="#1a3a2a">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kenangan Kita — Mekanisasi Pertanian 2023">
+    <meta property="og:description" content="27 Siswa, Satu Cerita, Sejuta Kenangan. SMKS Kodeco.">
+    <meta property="og:type" content="website">
+    <title>Kenangan Kita — Mekanisasi Pertanian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&family=Crimson+Pro:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/main.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="site-nav" id="siteNav">
+    <div class="nav-inner">
+        <a class="nav-logo" href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V8"/><path d="M12 8C12 8 8 6 6 3c3 0 6 2 6 5z"/><path d="M12 8C12 8 16 6 18 3c-3 0-6 2-6 5z"/></svg>
+            <span>MP 2023</span>
+        </a>
+        <div class="nav-links">
+            <a class="nav-link" href="#murid-section">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                Wajah
+            </a>
+            <a class="nav-link" href="#galeri-section">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                Galeri
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- LOADING SCREEN -->
+<div class="loader-overlay" id="loaderOverlay">
+    <div class="loader-bg">
+        <div class="loader-grain"></div>
+        <div class="loader-orb lo1"></div>
+        <div class="loader-orb lo2"></div>
+    </div>
+    <div class="loader-content">
+        <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_180,q_auto,f_auto/smks_Kodeco_owxdzs" alt="SMKS Kodeco Logo" class="loader-logo-img">
+        <p class="loader-school">SMKS Kodeco</p>
+        <h1 class="loader-title">
+            <span class="lt-word">Selamat</span>
+            <span class="lt-word">Datang</span>
+        </h1>
+        <p class="loader-sub">di Kenangan <em>Mekanisasi Pertanian</em></p>
+        <div class="loader-bar-wrap">
+            <div class="loader-bar" id="loaderBar"></div>
+        </div>
+        <p class="loader-pct" id="loaderPct">0%</p>
+    </div>
+    <div class="loader-bottom">
+        <span>Angkatan 2026</span>
+        <span class="loader-dot">◆</span>
+        <span>27 Siswa</span>
+        <span class="loader-dot">◆</span>
+        <span>Satu Cerita</span>
+    </div>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="hero-bg">
+        <div class="hero-grain"></div>
+        <div class="hero-orb orb1"></div>
+        <div class="hero-orb orb2"></div>
+        <div class="hero-orb orb3"></div>
+        <div class="floating-leaves">
+            <span class="leaf leaf-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22C6 16 4 10 6 4c4 1 8 4 9 9-2-1-4-1-6 0 2 2 3 5 3 9z"/></svg></span>
+            <span class="leaf leaf-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l1 4-1 1-1-1 1-4zm-4 6l3 2v8m2-8l3-2"/></svg></span>
+            <span class="leaf leaf-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22C6 16 4 10 6 4c4 1 8 4 9 9-2-1-4-1-6 0 2 2 3 5 3 9z"/></svg></span>
+            <span class="leaf leaf-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="20" x2="12" y2="4"/><path d="M6 8c1-2 4-4 6-4s5 2 6 4c-2 1-5 1-6 0-1 1-4 1-6 0z"/></svg></span>
+            <span class="leaf leaf-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l1 4-1 1-1-1 1-4zm-4 6l3 2v8m2-8l3-2"/></svg></span>
+            <span class="leaf leaf-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22C6 16 4 10 6 4c4 1 8 4 9 9-2-1-4-1-6 0 2 2 3 5 3 9z"/></svg></span>
+        </div>
+    </div>
+    <div class="hero-content">
+        <div class="hero-badge">&#10022; Angkatan 2026 &#10022;</div>
+        <h1 class="hero-title">
+            <span class="title-line">Kenangan</span>
+            <span class="title-line italic">Kebersamaan</span>
+        </h1>
+        <p class="hero-jurusan">Mekanisasi Pertanian</p>
+        <p class="hero-sub">27 Siswa, Satu Cerita, Sejuta Kenangan</p>
+    </div>
+    <div class="hero-scroll-hint">
+        <span>Gulir ke bawah</span>
+        <div class="scroll-line"></div>
+    </div>
+    <div class="hero-tape hero-tape-left">KENANGAN • PERSAHABATAN • MEKANISASI •</div>
+    <div class="hero-tape hero-tape-right">2026 • LULUS • SUKSES • BERSAMA •</div>
+</section>
+
+<!-- MURID CAROUSEL SECTION -->
+<section class="murid-section" id="murid-section">
+    <div class="section-header">
+        <span class="section-label">// 27 Siswa Luar Biasa</span>
+        <h2 class="section-title">Wajah-Wajah<br><em>Mekanisasi</em></h2>
+        <p class="section-desc">Klik foto untuk melihat profil lengkap</p>
+    </div>
+
+    <div class="carousel-wrapper">
+        <div class="carousel-track" style="--time: 80s; --total: 27;">
+
+            <div class="carousel-item" style="--i:1;" data-id="1">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/AL_AMIN00_xiadhe" alt="AL AMIN">
+                <div class="name-tag">AL Amin</div>
+            </div>
+            <div class="carousel-item" style="--i:2;" data-id="2">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/ALFA00_jlejfr" alt="ALFA">
+                <div class="name-tag">Alfa</div>
+            </div>
+            <div class="carousel-item" style="--i:3;" data-id="3">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/ANGGA00_fw2yx1" alt="ANGGA">
+                <div class="name-tag">Angga</div>
+            </div>
+            <div class="carousel-item" style="--i:4;" data-id="4">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/ARDIAN_ASMARA00_ulsx0y" alt="ARDIAN ASMARA">
+                <div class="name-tag">Ardian</div>
+            </div>
+            <div class="carousel-item" style="--i:5;" data-id="5">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/ARDIAN00_jywmm4" alt="ARDIAN">
+                <div class="name-tag">Usnan</div>
+            </div>
+            <div class="carousel-item" style="--i:6;" data-id="6">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/ARY00_mieppa" alt="ARY">
+                <div class="name-tag">Ary</div>
+            </div>
+            <div class="carousel-item" style="--i:7;" data-id="7">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/ARYA00_lauum9" alt="ARYA">
+                <div class="name-tag">Arya</div>
+            </div>
+            <div class="carousel-item" style="--i:8;" data-id="8">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/ASNI00_odocle" alt="ASNI">
+                <div class="name-tag">Asni</div>
+            </div>
+            <div class="carousel-item" style="--i:9;" data-id="9">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/BILAL00_jkcjqj" alt="BILAL">
+                <div class="name-tag">Bilal</div>
+            </div>
+            <div class="carousel-item" style="--i:10;" data-id="10">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/BUDI00_brmzez" alt="BUDI">
+                <div class="name-tag">Budi</div>
+            </div>
+            <div class="carousel-item" style="--i:11;" data-id="11">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/CHARLES00_eo7j8z" alt="CHARLES">
+                <div class="name-tag">Charles</div>
+            </div>
+            <div class="carousel-item" style="--i:12;" data-id="12">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/DIANSYAH00_gpsnmz" alt="DIANSYAH">
+                <div class="name-tag">Diansyah</div>
+            </div>
+            <div class="carousel-item" style="--i:13;" data-id="13">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/DIKA00_ejlcml" alt="DIKA">
+                <div class="name-tag">Dika</div>
+            </div>
+            <div class="carousel-item" style="--i:14;" data-id="14">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/EGIDIUS00_odoylq" alt="EGIDIUS">
+                <div class="name-tag">Peni</div>
+            </div>
+            <div class="carousel-item" style="--i:15;" data-id="15">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/ERVAN00_wcbjcb" alt="ERVAN">
+                <div class="name-tag">Ervan</div>
+            </div>
+            <div class="carousel-item" style="--i:16;" data-id="16">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/HENGKY00_g5mhuy" alt="HENGKY">
+                <div class="name-tag">Hengky</div>
+            </div>
+            <div class="carousel-item" style="--i:17;" data-id="17">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/HERMAWAN00_fyp82i" alt="HERMAWAN">
+                <div class="name-tag">Hermawan</div>
+            </div>
+            <div class="carousel-item" style="--i:18;" data-id="18">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/MASJIDI00_nycezj" alt="MASJIDI">
+                <div class="name-tag">Masjidi</div>
+            </div>
+            <div class="carousel-item" style="--i:19;" data-id="19">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/RAGIL00_f6f8kc" alt="RAGIL">
+                <div class="name-tag">Ragil</div>
+            </div>
+            <div class="carousel-item" style="--i:20;" data-id="20">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/RAMADAN00_gptacb" alt="RAMADAN">
+                <div class="name-tag">Ramadan</div>
+            </div>
+            <div class="carousel-item" style="--i:21;" data-id="21">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/REHAN00_m4bks1" alt="REHAN">
+                <div class="name-tag">Rehan</div>
+            </div>
+            <div class="carousel-item" style="--i:22;" data-id="22">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/REVANDO00_gyyyv7" alt="REVANDO">
+                <div class="name-tag">Revando</div>
+            </div>
+            <div class="carousel-item" style="--i:23;" data-id="23">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/RICO00_fupuky" alt="RICO">
+                <div class="name-tag">Rico</div>
+            </div>
+            <div class="carousel-item" style="--i:24;" data-id="24">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/RIO00_sucq66" alt="RIO">
+                <div class="name-tag">Rio</div>
+            </div>
+            <div class="carousel-item" style="--i:25;" data-id="25">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/SAFRI00_qwuixd" alt="SAFRI">
+                <div class="name-tag">Safri</div>
+            </div>
+            <div class="carousel-item" style="--i:26;" data-id="26">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/SAUFI00_eepl1v" alt="SAUFI">
+                <div class="name-tag">Saupy</div>
+            </div>
+            <div class="carousel-item" style="--i:27;" data-id="27">
+                <img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_400,q_auto,f_auto/SUBHAN00_ze16jc" alt="SUBHAN">
+                <div class="name-tag">Subhan</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALERI SECTION -->
+<section class="folder-gallery-section" id="galeri-section">
+
+    <div class="section-header light">
+        <span class="section-label">// Arsip Kenangan Kelas</span>
+        <h2 class="section-title white">Galeri <em>Foto Kita</em></h2>
+        <p class="section-desc white">Pilih folder, klik foto untuk diperbesar</p>
+    </div>
+
+    <!-- TAB NAVIGATOR -->
+    <div class="folder-tabs-wrap">
+        <div class="folder-tabs">
+
+            <button class="folder-tab active" data-folder="absen">
+                <span class="folder-tab-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
+                </span>
+                <span class="folder-tab-name">Absen</span>
+                <span class="folder-tab-count" id="count-absen">0 foto</span>
+            </button>
+
+            <button class="folder-tab" data-folder="kunjungan">
+                <span class="folder-tab-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                </span>
+                <span class="folder-tab-name">Kunjungan</span>
+                <span class="folder-tab-count" id="count-kunjungan">0 foto</span>
+            </button>
+
+            <button class="folder-tab" data-folder="random">
+                <span class="folder-tab-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.5" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+                </span>
+                <span class="folder-tab-name">Random</span>
+                <span class="folder-tab-count" id="count-random">0 foto</span>
+            </button>
+
+            <button class="folder-tab" data-folder="selfie">
+                <span class="folder-tab-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                </span>
+                <span class="folder-tab-name">Foto Bareng</span>
+                <span class="folder-tab-count" id="count-selfie">0 foto</span>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- PANELS -->
+    <div class="folder-panels">
+
+        <!-- PANEL: ABSEN -->
+        <div class="folder-panel active" id="panel-absen">
+            <div class="folder-panel-meta">
+                <span class="fpm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></svg></span>
+                <span class="fpm-title">Absen</span>
+                <span class="fpm-desc">Dokumentasi kehadiran yang penuh cerita</span>
+            </div>
+            <div class="folder-scroll-wrap">
+                <div class="folder-scroll-track" id="track-absen">
+                    <div class="fst-inner">
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_1_s6nhqi" data-caption="Absen bareng teman-teman dan Ibu Vina // 01">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_1_s6nhqi" alt="Absen 1" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Absen // 01</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_2_m60wbi" data-caption="Foto dua... // 02">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_2_m60wbi" alt="Absen 2" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Absen // 02</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_3_ymezaj" data-caption="Absen bareng teman-teman">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_3_ymezaj" alt="Absen 3" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Absen // 03</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_4_lykb0m" data-caption="Absen Days Selasa // 04">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_4_lykb0m" alt="Absen 4" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Absen // 04</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_5_whhpjw" data-caption="Absen Days Rabu // 05">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_5_whhpjw" alt="Absen 5" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Absen // 05</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_6_fautv2" data-caption="Absen Days Kamis // 06">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_6_fautv2" alt="Absen 6" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Absen // 06</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_7_t9ddnv" data-caption="Absen Days Kamis // 07">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_7_t9ddnv" alt="Absen 7" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Absen // 07</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_8_d6pi2v" data-caption="Absen Days Kamis // 08">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_8_d6pi2v" alt="Absen 8" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Absen // 08</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_9_v3nnkf" data-caption="Absen Days Kamis // 09">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_9_v3nnkf" alt="Absen 9" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Absen // 09</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_10_nocrkc" data-caption="Absen Days Jum'at // 10">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_10_nocrkc" alt="Absen 10" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Absen // 10</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_11_muoywx" data-caption="Absen Days Jum'at // 11">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/absen_11_muoywx" alt="Absen 11" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Absen // 11</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fst-scroll-hint">← Geser untuk lihat lebih banyak →</p>
+        </div>
+
+        <!-- PANEL: KUNJUNGAN -->
+        <div class="folder-panel" id="panel-kunjungan">
+            <div class="folder-panel-meta">
+                <span class="fpm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg></span>
+                <span class="fpm-title">Kunjungan</span>
+                <span class="fpm-desc">Belajar langsung dari lapangan</span>
+            </div>
+            <div class="folder-scroll-wrap">
+                <div class="folder-scroll-track" id="track-kunjungan">
+                    <div class="fst-inner">
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/kunjungan_1_w3aaaa" data-caption="Kunjungan ke Dinas Pertanian">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/kunjungan_1_w3aaaa" alt="Kunjungan 1" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Kunjungan // 01</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/kunjungan_2_blvgz1" data-caption="Foto bareng pembimbing Traktor">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/kunjungan_2_blvgz1" alt="Kunjungan 2" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Kunjungan // 02</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Kunjungan_3_l359gc" data-caption="Praktik langsung di lapangan">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Kunjungan_3_l359gc" alt="Kunjungan 3" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Praktik Lapangan</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Kunjungan_4_cetjre" data-caption="Anak MP, Hebat !">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Kunjungan_4_cetjre" alt="Kunjungan 4" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Bareng MP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fst-scroll-hint">← Geser untuk lihat lebih banyak →</p>
+        </div>
+
+        <!-- PANEL: RANDOM -->
+        <div class="folder-panel" id="panel-random">
+            <div class="folder-panel-meta">
+                <span class="fpm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.5" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></span>
+                <span class="fpm-title">Random</span>
+                <span class="fpm-desc">Momen spontan yang justru paling berkesan</span>
+            </div>
+            <div class="folder-scroll-wrap">
+                <div class="folder-scroll-track" id="track-random">
+                    <div class="fst-inner">
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/apani_1_duqzhi" data-caption="Kerandoman // 01">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/apani_1_duqzhi" alt="Random 1" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Kerandoman // 01</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/apani_2_yq0vtj" data-caption="Kerandoman // 02">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/apani_2_yq0vtj" alt="Random 2" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Kerandoman // 02</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/apani_3_nvn587" data-caption="Kerandoman // 03">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/apani_3_nvn587" alt="Random 3" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Kerandoman // 03</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/apani_4_ep7a3k" data-caption="Kerandoman // 04">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/apani_4_ep7a3k" alt="Random 4" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Kerandoman // 04</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fst-scroll-hint">← Geser untuk lihat lebih banyak →</p>
+        </div>
+
+        <!-- PANEL: SELFIE BARENG -->
+        <div class="folder-panel" id="panel-selfie">
+            <div class="folder-panel-meta">
+                <span class="fpm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
+                <span class="fpm-title">Foto Bareng</span>
+                <span class="fpm-desc">Wajah-wajah terbaik yang selalu bikin kangen</span>
+            </div>
+            <div class="folder-scroll-wrap">
+                <div class="folder-scroll-track" id="track-selfie">
+                    <div class="fst-inner">
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Foto_1_vto2hh" data-caption="Foto bareng ! // 01">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Foto_1_vto2hh" alt="Selfie 1" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Foto Bareng // 01</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Foto_2_dhvaa5" data-caption="Foto bareng ! // 02">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Foto_2_dhvaa5" alt="Selfie 2" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Foto Bareng // 02</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Foto_3_ogkqpl" data-caption="Foto bareng ! // 03">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Foto_3_ogkqpl" alt="Selfie 3" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Foto Bareng // 03</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Foto_4_znoidg" data-caption="Foto bareng ! // 04">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Foto_4_znoidg" alt="Selfie 4" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Foto Bareng // 04</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Foto_5_pa6rdf" data-caption="Foto bareng ! // 05">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Foto_5_pa6rdf" alt="Selfie 5" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Foto Bareng // 05</p>
+                        </div>
+                        <div class="fst-card" data-src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Foto_6_f8t43e" data-caption="Foto bareng ! // 06">
+                            <div class="fst-img-wrap"><img src="https://res.cloudinary.com/dk38zn7up/image/upload/w_800,q_auto,f_auto/Foto_6_f8t43e" alt="Selfie 6" loading="lazy"><div class="fst-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg></div></div>
+                            <p class="fst-caption">Foto Bareng // 06</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fst-scroll-hint">← Geser untuk lihat lebih banyak →</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOLDER LIGHTBOX -->
+<div class="folder-lightbox" id="folderLightbox">
+    <button class="fl-close" id="flClose" aria-label="Tutup">✕</button>
+    <button class="fl-nav fl-prev" id="flPrev" aria-label="Sebelumnya">&#8592;</button>
+    <div class="fl-img-wrap">
+        <img id="flImg" src="" alt="">
+    </div>
+    <p class="fl-caption" id="flCaption"></p>
+    <button class="fl-nav fl-next" id="flNext" aria-label="Berikutnya">&#8594;</button>
+</div>
+
+<!-- QUOTE SECTION -->
+<section class="quote-section">
+    <div class="quote-bg-text">KENANGAN</div>
+    <div class="quote-content">
+        <p class="quote-mark">"</p>
+        <p class="quote-text">Bukan traktornya yang kita rindukan,<br>tapi orang-orang yang duduk di sampingnya.</p>
+        <p class="quote-author">— Mekanisasi Pertanian Angkatan 2023</p>
+    </div>
+</section>
+
+<!-- MODAL PROFIL -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <div class="modal-card" id="modalCard">
+        <button class="modal-close" id="modalClose" aria-label="Tutup profil">✕</button>
+        <div class="modal-left">
+            <div class="modal-photo-wrap">
+                <img id="modalPhoto" src="" alt="">
+                <div class="modal-photo-ring"></div>
+            </div>
+            <div class="modal-badge-wrap">
+                <span class="modal-badge">Mekanisasi Pertanian</span>
+                <span class="modal-badge year">Angkatan 2023</span>
+            </div>
+        </div>
+        <div class="modal-right">
+            <h2 id="modalName" class="modal-name"></h2>
+            <p id="modalNickname" class="modal-nickname"></p>
+            <div class="modal-quote-wrap">
+                <p id="modalQuote" class="modal-quote"></p>
+            </div>
+            <div class="modal-info-grid">
+                <div class="modal-info-item">
+                    <span class="info-label info-asal">Asal</span>
+                    <span id="modalAsal" class="info-val"></span>
+                </div>
+                <div class="modal-info-item">
+                    <span class="info-label info-keahlian">Keahlian</span>
+                    <span id="modalKeahlian" class="info-val"></span>
+                </div>
+                <div class="modal-info-item">
+                    <span class="info-label info-cita">Cita-cita</span>
+                    <span id="modalCita" class="info-val"></span>
+                </div>
+                <div class="modal-info-item">
+                    <span class="info-label info-aib">Dikenal</span>
+                    <span id="modalAib" class="info-val aib-text"></span>
+                </div>
+            </div>
+            <div class="modal-sosmed">
+                <p class="sosmed-title">Sosial Media</p>
+                <div class="sosmed-links" id="modalSosmed"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- LIGHTBOX (legacy, for photo-card) -->
+<div class="lightbox-overlay" id="lightboxOverlay" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Tutup">✕</button>
+    <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="">
+    </div>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-divider">
+        <span class="footer-divider-line"></span>
+        <span class="footer-divider-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V8"/><path d="M12 8C12 8 8 6 6 3c3 0 6 2 6 5z"/><path d="M12 8C12 8 16 6 18 3c-3 0-6 2-6 5z"/><path d="M12 12C12 12 8 10 6 7c3 0 6 2 6 5z"/><path d="M12 12C12 12 16 10 18 7c-3 0-6 2-6 5z"/></svg>
+        </span>
+        <span class="footer-divider-line"></span>
+    </div>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <svg class="footer-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V8"/><path d="M12 8C12 8 8 6 6 3c3 0 6 2 6 5z"/><path d="M12 8C12 8 16 6 18 3c-3 0-6 2-6 5z"/><path d="M12 12C12 12 8 10 6 7c3 0 6 2 6 5z"/><path d="M12 12C12 12 16 10 18 7c-3 0-6 2-6 5z"/></svg>
+            Mekanisasi Pertanian
+        </div>
+        <p class="footer-tagline">27 Siswa yang akan selalu terhubung, meski jalan kita berbeda.</p>
+        <p class="footer-year">Angkatan 2023 · Dibuat Oleh | @official.xiimp | @devxpxnyctrl_</p>
+        <div class="footer-tape"><span class="footer-tape-inner">MP JAYA &bull; SELAMAT JALAN &bull; TETAP BERSATU &bull; SUKSES SELALU &bull;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MP JAYA &bull; SELAMAT JALAN &bull; TETAP BERSATU &bull; SUKSES SELALU &bull;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+    </div>
+    <p class="footer-copy">© 2023 Mekanisasi Pertanian · SMKS Kodeco</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
